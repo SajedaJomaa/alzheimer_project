@@ -1,0 +1,28 @@
+/* *{ */
+    /* margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: frefdokaOne ; 
+    color:rgb(56, 53, 53);
+    src: url('../font/Fredoka/Fredoka-VariableFont_wdth\,wght.ttf');
+    } */
+    *{
+        src: url('../font/Fredoka/Fredoka-VariableFont_wdth\,wght.ttf');
+
+    }
+    @font-face {
+        font-family:frefdokaOne ;
+        src: url('../font/Fredoka/Fredoka-VariableFont_wdth\,wght.ttf');
+        }
+
+body{
+/* margin: 0;
+padding: 0;
+display: flex;
+justify-content: center; */
+background: linear-gradient(to right, #e2e2e2, #9bace2);
+height: 100vh;
+width: 100%;
+font-family: frefdokaOne;
+transition: .8s;
+}

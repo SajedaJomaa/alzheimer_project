@@ -1,0 +1,34 @@
+@media (max-width: 991px){
+    
+ nav .container{
+width: 100% limportant;
+
+ }
+ .text-primary{
+    font-size: 20px;
+ }
+ .navbar-brand i {
+    font-size: 27px;
+   
+ }
+ .search{
+    width: 150px;
+ }
+ /* .first-list{
+    width:80px;
+    
+ } */
+ .nav-item{
+    display: flex;
+    width: 80px;
+ }
+}
+
+
+
+
+
+
+
+
+

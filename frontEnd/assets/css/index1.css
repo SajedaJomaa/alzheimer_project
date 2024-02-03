@@ -1,0 +1,100 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+margin: 0;
+padding: 0;
+display: flex;
+justify-content: center;
+align-items: center;
+background-image: url(/assets/image/m8.jpeg);
+background-size: cover;
+background-position: center;
+min-height: 100vh;
+font-family: Arial, sans-serif;
+transition: .8s;
+}
+
+.box{
+    position: relative;
+    border-radius: 12px;
+    width: 370px;
+    margin: 0 auto;
+    text-align: center;
+    padding: 18px;
+    background-color: #ffffff9c;
+}
+
+.edite-box{
+    margin-top: 50px;
+}
+label{
+    display: block;
+    position: absolute;
+    font-size: 18px;
+    color: rgb(41, 61, 151);
+    margin-top: -62px;
+    padding-left: 18px;
+    text-align: left;
+    pointer-events: none;
+    transition: .4s;
+}
+input{
+    width: 95%;
+    height: 42px;
+    margin: 15px 1px 30px 1px;
+    padding: 9px;
+    font-size: 18px;
+    color: #030303;
+    border: rgb(93, 141, 231) 1px solid;
+    outline: none;
+    border-radius: 5px;
+}
+
+input:focus~label,
+input:valid~label{
+   margin-top: -95px;
+    padding-left: 8px;
+    color: rgb(93, 141, 231) 1px solid;
+    font-weight: 500;
+}
+.m1{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    position: absolute;
+    top: -50px;
+    left: 130px;
+    padding: 5px;
+    text-align: center;
+}
+
+.edite-box small{
+    display: flex;
+    position: absolute;
+    color: red;
+    margin: -28px;
+    margin-left:45px;
+    visibility: hidden;
+  }
+button{
+   display: block;
+    margin: 0 auto;
+    margin-top: 25px;
+    padding: 10px 43px 10px 43px;
+    border: none;
+    border-radius: 32px;
+    font-size: 20px;
+    background-color: rgb(41, 61, 151);
+    cursor: pointer;
+    color: #030303;
+}
+button:hover, button:focus{
+    background-color: rgb(41, 71, 151);
+    cursor: pointer;
+}
+
+ 
