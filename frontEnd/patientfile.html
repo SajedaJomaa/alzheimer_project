@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./assets/css/patientfile.css" />
+
+    <title>Patient Files</title>
+  </head>
+  <body>
+    <div class="patientfolder position-relative">
+      <div class="container">
+        <input
+          type="search"
+          placeholder="search..."
+          id="search"
+          class="form-control my-3"
+        />
+        <div id="data"></div>
+      </div>
+      <div class="modal" id="modal">
+        <div class="modal-header">
+          <div class="title"></div>
+          <button data-close-button class="close-button">&times;</button>
+        </div>
+        <div class="modal-body">
+          <div id="imageContainer"></div>
+        </div>
+      </div>
+      <div id="overlay"></div>
+    </div>
+    <script src="./assets/js/patientfile.js"></script>
+    <!-- Include CryptoJS library -->
+  </body>
+</html>

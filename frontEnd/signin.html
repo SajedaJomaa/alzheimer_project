@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="assets/css/all.min.css" />
+    <link rel="stylesheet" href="assets/css/signin.css" />
+    <link rel="stylesheet" href="assets/css/all.min.css" />
+    <title>Sign In</title>
+  </head>
+  <body>
+    <div class="container" id="container">
+      <div class="form-container sign-in">
+        <form onsubmit="submitFormData()" class="form">
+          <div class="title">
+            <h1>Sign In</h1>
+
+            <i class="fa-solid fa-brain text-success"></i>
+          </div>
+          <div class="signin-box">
+            <div>
+              <input type="ُEmail" placeholder="email" id="txtEmail" />
+              <small class="d">Error Massage</small>
+            </div>
+            <div>
+              <input type="password" placeholder="Password" id="txtPwd" />
+              <small class="d">Error Massage</small>
+            </div>
+          </div>
+          <a href="forget.html">Forget Your Password?</a>
+          <button type="submit" id="login">Sign In</button>
+        </form>
+      </div>
+      <div class="toggle-container">
+        <div class="toggle">
+          <div class="toggle-panel toggle-left">
+            <h1>Hello, Friend!</h1>
+            <p>Register with your personal details to use our site!</p>
+            <button class="hidden" id="register">
+              <a class="btn-color" href="register.html">Sign Up</a>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="assets/js/signin.js"></script>
+  </body>
+</html>

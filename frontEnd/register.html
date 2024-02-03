@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link  rel="stylesheet" href="assets/css/all.min.css">
+    <link rel="stylesheet"  href="assets/css/register.css">
+    
+    <title>Document</title>
+</head>
+<body>
+    <div class="container" id="container">
+        <div class="form-container sign-up">
+            <form onSubmit={submitFormData} id="form" class="form" >
+                <div class="title">
+                <h1>Register a new account</h1><i class="fa-solid fa-brain text-success"></i>
+            </div>
+
+               <div class="reg-box">
+                <div>
+                <input type="text" placeholder="id" id="txtId" required>
+                
+                <small>Error Massage</small>
+                 </div>
+                  <div>
+                <input type="text" placeholder="Name" id="txtUserName">
+            
+                <small>Error Massage</small>
+                 </div> 
+                 <div>
+                <input type="email" placeholder="Email" id="txtEmail">
+            
+                <small>Error Massage</small>
+                 </div>
+                 <div>
+                    <input type="text" placeholder="Phone number" id="txtPhoneNumber" required>
+                    <label for="Phone_number"> </label>
+                    <small>Error Message</small>
+        
+                  </div>
+                  <div>
+                    <input type="date" id="txtBirth Date" required>
+                    <label for="Birth_Date"></label>
+                    <small>Error Message</small>
+        
+                  </div>
+                  <div>
+                    <input type="password" placeholder="Password" id="txtPwd">
+                    <small>Error Massage</small>
+                     </div>
+                     <div>
+                    <input type="password" placeholder="Password" id="txtConPwd">
+                    <small>Error Massage</small>
+                    </div>
+                    <div class="gender-title">
+                        <span class="gender1">Gender:</span>
+                        <div class="gender2">
+                         <input type="radio" name="gender" id="male">  
+                         <label1 for="male">Male</label1>
+                         <input type="radio" name="gender" id="female">
+                         <label1 for="female">Female</label1>
+                         <small>Error Message</small>
+                     </div>
+                   
+                    <button id="register" type="submit">Sign Up</button>
+                </div>
+                 </div>
+              
+            </form>
+        </div>
+        <div class="toggle-container">
+            <div class="toggle">
+                <div class="toggle-panel toggle-left">
+                    <h2>Welcome Back!</h2>
+                    <p>Enter your personal details to Sign In</p>
+                    <button class="hidden" id="login"><a class="btn-color"       href="signin.html">Sign In </a></button>
+                </div>
+                </div>
+                </div>
+                <script src="assets/js/bootstrap.min.js"></script>
+    <!-- jquery -->
+    <script src="assets/js/code.jquery.com_jquery-3.7.1.min.js"></script>
+                <script src="assets/js/register.js"></script>
+</body>
+</html>
