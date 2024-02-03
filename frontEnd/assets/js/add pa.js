@@ -1,6 +1,8 @@
 let token = localStorage.getItem("token");
 
 if (token) {
+
+    //add patient
     let id = document.getElementById("txtId");
     let userName = document.getElementById("txtUserName");
     let email = document.getElementById("txtEmail");
@@ -10,12 +12,7 @@ if (token) {
     let gender = document.getElementById("male");
     let gender1 = document.getElementById("female");
     let form = document.querySelector("form");
-    document.querySelector("button")
-        .addEventListener("click", (event) => {
-            event.preventDefault();
 
-            validateInput();
-        });
     function validateInput() {
         //check id,username is empty 
         if (id.value.trim() === "") {
@@ -46,6 +43,12 @@ if (token) {
                 onSuccess(email);
             }
         }
+        if (date.value.trim() === "") {
+            onError(date, "Birth Date cannot be empty");
+        } else {
+            onSuccess(date);
+        }
+
         //phonenum
         if (phone.value.trim() === "") {
             onError(phone, "Phone Number cannot be empty");
@@ -58,20 +61,13 @@ if (token) {
                 onSuccess(phone);
             }
         }
-        if (date.value.trim() === "") {
-            onError(date, "Birth Date cannot be empty");
-        } else {
-            onSuccess(date);
-        }
-
-
         //password
         if (pwd.value.trim() === "") {
             onError(pwd, "Password cannot be empty");
         }
         else {
             if (!isValidPwd(pwd.value.trim())) {
-                onError(pwd, "Password must be at least 8,numer,\n uppercase and lowercase");
+                onError(pwd, "Password must be at least 6,numer,\n uppercase and lowercase");
 
             }
             else {
@@ -88,6 +84,7 @@ if (token) {
         }
     }
 
+
     function submitFormData(e) {
         e.preventDefault();
     }
@@ -102,10 +99,10 @@ if (token) {
         let dateOfBarth = document.getElementById("txtBirth Date").value;
         let age = new Date().getYear() - new Date(dateOfBarth).getYear();
         if (document.getElementsByName('gender').checked == true) {
-            gender = 'Male';
+            gender = 'Female';
         }
         else {
-            gender = 'Female';
+            gender = 'Male';
         }
         let obj = {
             DIDE,
@@ -118,12 +115,11 @@ if (token) {
             age,
 
         }
-        registerNewUser(obj);
+        AddNewPatient(obj);
     })
-
-    async function registerNewUser(obj) {
+    async function AddNewPatient(obj) {
         try {
-            let res = await fetch(`http://localhost:5000/doctor/addPatient`, {
+            let res = await fetch(`http://localhost:5000/doctor/addPatient `, {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json"
@@ -133,13 +129,14 @@ if (token) {
             let out = await res.json();
             alert(out.msg);
             if (out.msg === "Successfully register") {
-                window.location.href = "../signin.html"
+                window.location.href = "../img det.html"
             }
         } catch (error) {
             console.log("error while registering from frontend");
             alert("error while register")
         }
     }
+
     function onSuccess(input) {
         let parent = input.parentElement;
         let messageEle = parent.querySelector("small");
@@ -167,13 +164,14 @@ if (token) {
         return /^\d{9}$/.test(id);
     };
     function isValidPwd(pwd) {
-        return /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,20}$/.test(pwd);
+        return /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,20}$/.test(pwd);
     };
     function isValidName(userName) {
         return /^[a-zA-Z]+ [a-zA-Z]+ [a-zA-Z]+$/.test(userName);
     };
 
+
 } else {
     alert("Login First to Come to this Page");
-    window.location.href = "./login.html";
+    window.location.href = "./signin.html";
 }
