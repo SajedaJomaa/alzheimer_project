@@ -2,7 +2,7 @@ import joi from "joi";
 
 
 export const generalFields = {
-  DIDE: joi.string().pattern(/^[0-9]+$/).length(9).required(),
+  DIDE: joi.string().pattern(/^\d{9}$/).required(),
 
   email: joi.string().email().required().messages({
     "string.empty": "email is required",
