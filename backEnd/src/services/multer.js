@@ -2,8 +2,11 @@
 import multer from "multer";
 import mimetype from 'mime-type';
 
+const fileValidation = {
+  image: ['image/png', 'image/jpeg']
+}
 
-function fileUpload() {
+function fileUpload(fileValidation) {
   const storage = multer.diskStorage({});
   function fileFilter(req, file, cb) {
     // let fet = atob(file);
