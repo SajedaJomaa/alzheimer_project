@@ -451,7 +451,6 @@ export const remove = async (req, res, next) => {
     let resultData = await ResultModel.findOne({ where: { DIDE: req.params.id } });
     let imageData = await ImageModel.findOne({ where: { DIDE: req.params.id } });
     if (userData != null) {
-      await UserModel.destroy({ where: { id: userData.id } });
       await ResultModel.destroy({ where: { id: resultData.id } });
       await ImageModel.destroy({ where: { id: imageData.id } });
 
